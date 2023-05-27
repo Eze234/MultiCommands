@@ -4,7 +4,7 @@ const fs = require("node:fs");
  * @ Extends config
  */
 
-class Settings{
+class Settings {
     constructor(options) {
         if (typeof options.path !== "string") return error({
             title: "String Error",
