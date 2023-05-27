@@ -6,7 +6,7 @@ function error({ title: title, code: code, error: e }) {
     let obj = {
         title: title,
         code: code,
-        MultiCommands: err[String(code)] || null,
+        MultiCommands: err[code] || null,
         error: e || null
     }
     return console.log(obj)

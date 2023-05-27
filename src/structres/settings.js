@@ -13,7 +13,7 @@ class Settings extends config {
 
         if (!options.path) return error({
             title: "Missing Path",
-            code: 030
+            code: "missargs"
         })
 
         if (typeof options.loaderType !== "string") return error({
@@ -23,18 +23,18 @@ class Settings extends config {
 
         if (!["run", "execute"].includes(options.loaderType)) return error({
             title: "Try: execute",
-            code: 300
+            code: "loaderr"
         })
 
         if (typeof options.Client !== "object") return error({
             title: "Client Error",
-            code: 000,
+            code: "login",
             error: "Please provide the client given by discord.js"
         })
 
         if (!options.Client.ws) return error({
             title: "Client Error",
-            code: 000,
+            code: "login",
             error: "The client websocket provided is invalid."
         })
 
@@ -70,7 +70,7 @@ class Settings extends config {
         }catch(e) {
             error({
                 title: e.name, 
-                code: 200,
+                code: "slashediterr",
                 error: (e?.stack || e)
             })
         }
