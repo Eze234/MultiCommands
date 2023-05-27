@@ -71,9 +71,9 @@ module.exports = {
         let ctx = m.context(d, args);
         ctx.send({
             content: "Pong!", // String -> optional with embed
-            ephemeral: true // Boolean -> optional,
-            reply: true // Boolean -> optional,
-            embeds: [] // ->  Array optional with content,
+            ephemeral: true, // Boolean -> optional,
+            reply: true, // Boolean -> optional,
+            embeds: [], // ->  Array optional with content,
             components: [] // Array -> optional with content
         })
     }
