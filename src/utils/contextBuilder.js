@@ -6,8 +6,10 @@ class contextBuilder {
         this.type;
         if (!data.content) {
             this.type = "slash";
+            this.author = data.user
         } else {
             this.type = "prefix"
+            this.author = data.author
         }
     }
 
