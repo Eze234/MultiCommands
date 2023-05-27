@@ -3,7 +3,7 @@ const { error } = require("./error,js");
  * @ Extends ctx
  */
 
-class context extends ctx {
+class context{
     cotructor(type, args) {
         if (!type) return error({
             title: "Missing type: ctx"
