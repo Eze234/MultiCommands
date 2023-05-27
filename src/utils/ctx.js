@@ -13,7 +13,7 @@ class context {
     }
 
 
-    async send({ content: c, embeds: e, components: _c, fetchReply: f, ephemeral: e, reply: r }) {
+    async send({ content: c, embeds: e, components: _c, fetchReply: f, ephemeral: _e, reply: r }) {
         let ctx = this.tp;
         if (ctx.m == "slash") {
             ctx.reply({
@@ -21,7 +21,7 @@ class context {
                 embeds: e || [],
                 components: _c || [],
                 fetchReply: f || false,
-                ephemeral: e || false
+                ephemeral: _e || false
             }).catch((e) => {
                 error({
                     title: e.name || "Discord.js Error",
