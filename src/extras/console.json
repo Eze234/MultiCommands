@@ -1,0 +1,14 @@
+{
+    "errors": {
+        "404": "The error was not found.",
+        "500": "An error occurred while obtaining the route",
+        "000": "An error occurred while logging in with the client.",
+        "001": "An error occurred while creating the application commands.",
+        "030": "Lack of arguments.",
+        "300": "The loader type is not valid.",
+        "200": "Error when performing an action on an application command"
+    },
+    "debug": {
+
+    }
+}
