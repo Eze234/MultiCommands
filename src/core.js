@@ -5,4 +5,4 @@ module.exports.Settings = require("./structres/settings")
 module.exports.error = require("./utils/error")
 
 // Context
-module.exports.context = require("./utils/ctx")
+module.exports.context = require("./utils/contextBuilder")

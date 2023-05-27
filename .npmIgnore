@@ -3,6 +3,7 @@ node_modules
 
 # Test
 structure.txt
+src/builders
 
 # Deprecated
 deprecated

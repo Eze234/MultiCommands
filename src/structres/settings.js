@@ -7,7 +7,6 @@ const fs = require("node:fs");
 class Settings {
     constructor(options) {
         this.path = options.path;
-        this.loaderType = options.loaderType;
         this.client = options.Client;
         this.debug = options.debug;
         this.forceGet = options
