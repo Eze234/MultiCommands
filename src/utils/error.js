@@ -1,4 +1,4 @@
-const err = require("./extras/console.json");
+const err = require("../extras/console.json");
 function error({ title: title, code: code, error: e }) {
     if (!title) return;
     if (!code) return;
