@@ -6,7 +6,7 @@
 **`index.js`**
 ```js
 const Discord = require("discord.js") // npm i discord.js || yarn add discord.js
-const MultiCommands = require("multi-commands@beta");
+const MultiCommands = require("multi-commands-beta");
 const client = new Discord.Client({
     intent: [
         // Your intents
@@ -58,7 +58,7 @@ client.on("interactionCreate", async(i) => {
 
 **`ping.js`**
 ```js
-const m = require("multi-commands@beta");
+const m = require("multi-commands-beta");
 
 module.exports = {
     name: "ping",

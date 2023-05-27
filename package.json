@@ -1,5 +1,5 @@
 {
-  "name": "multicommands@beta",
+  "name": "multicommands-beta",
   "version": "1.0.0",
   "description": "hybrid commands for your discord.js bot(NPM in testing phase).",
   "main": "src/core.js",
