@@ -15,7 +15,7 @@ class contextBuilder {
     }
 
     async send({ content: conten, ephemeral: eph, components: c, embeds: emb, reply: r, fetchReply: f }) {
-        if (this.data instanceof ChatInputCommandInteraction) {
+        if (this.type === "slash") {
             return this.data.reply({
                 content: conten,
                 ephemeral: eph || false,
