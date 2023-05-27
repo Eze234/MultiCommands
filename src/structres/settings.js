@@ -5,43 +5,43 @@ const fs = require("node:fs");
  */
 
 class Settings extends config {
-    constructor({ path: path, loaderType: loader, debug: d, client: Client }) {
-        if (typeof path !== "string") return error({
+    constructor(options) {
+        if (typeof options.path !== "string") return error({
             title: "String Error",
             error: "The path variable is a string"
         })
 
-        if (!path) return error({
+        if (!options.path) return error({
             title: "Missing Path",
             code: 030
         })
 
-        if (typeof loader !== "string") return error({
+        if (typeof options.loaderType !== "string") return error({
             title: "String Error",
             error: "The load variable is a string"
         })
 
-        if (!["run", "execute"].includes(loader)) return error({
+        if (!["run", "execute"].includes(options.loaderType)) return error({
             title: "Try: execute",
             code: 300
         })
 
-        if (typeof Client !== "object") return error({
+        if (typeof options.Client !== "object") return error({
             title: "Client Error",
             code: 000,
             error: "Please provide the client given by discord.js"
         })
 
-        if (!Client.ws) return error({
+        if (!options.Client.ws) return error({
             title: "Client Error",
             code: 000,
             error: "The client websocket provided is invalid."
         })
 
-        this.path = path;
-        this.loaderType = loader;
-        this.client = Client;
-        this.debug = debud;
+        this.path = options.path;
+        this.loaderType = options.loaderType;
+        this.client = options.Client;
+        this.debug = options.debug;
     }
 
     async setCollection({ prefix: p, slash: s }) {
