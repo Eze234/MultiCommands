@@ -39,7 +39,7 @@ client.on("messageCreate", async(message) => {
     const command = message.client.commands.find((d) => d.aliases.includes(args.shift().toLowerCase()))
         || message.client.commands.get(args.shift().toLowerCase());
         if (!command) return;
-        const ctx = new MultiCommands.context
+        const ctx = new MultiCommands.context(message, args)
 
         command.run(ctx)
 
