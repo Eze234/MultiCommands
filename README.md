@@ -14,7 +14,7 @@ const client = new Discord.Client({
 })
 const commands = new MultiCommands.Settings({
     Client: client, // Discord client
-    path: "./commands" // String,
+    path: "./commands", // String,
     debug: false // Boolean
 })
 
