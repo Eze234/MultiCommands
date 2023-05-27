@@ -12,7 +12,7 @@ class Settings {
         this.forceGet = options
     }
 
-    async setCollection({ prefix: p, slash: s }) {
+    async setCollection(p) {
         let path = this.path || this.forceGet.path
 
         for (const folder of fs.readdirSync(`${path}`)) {
@@ -21,7 +21,6 @@ class Settings {
                 const commands = await this.client.application.commands.fetch()
                     .catch(() => null)
                 p.set(command.name, command);
-                s.set(command.name, command);
                 if (!commands.find((x) => x.name === command.name)) {
                     this.client.application.commands.create(command.slash)
                 }
