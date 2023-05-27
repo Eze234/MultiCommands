@@ -1,3 +1,4 @@
+// Deprecated
 const err = require("../extras/console.json");
 function error({ title: title, code: code, error: e }) {
     if (!title) return;

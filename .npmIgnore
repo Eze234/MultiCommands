@@ -3,7 +3,7 @@ node_modules
 
 # Test
 structure.txt
-src/builders
+types/index.d.ts
 
 # Deprecated
 deprecated

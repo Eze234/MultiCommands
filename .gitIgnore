@@ -1,10 +1,10 @@
-# node
+# Node
 node_modules
 package-lock.json
 
-# test
+# Test
 structure.txt
-src/builders
+types/index.d.ts
 
-# Old functions
+# Deprecated
 deprecated
