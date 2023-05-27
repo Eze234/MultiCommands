@@ -3,6 +3,7 @@ class contextBuilder {
         this.data = data;
         this.params = params;
         this.args = args;
+        this.client = d.client
         this.type;
         if (!data.content) {
             this.type = "slash";
