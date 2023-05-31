@@ -1,6 +1,6 @@
 {
   "name": "multi-commands-beta",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "hybrid commands for your discord.js bot(NPM in testing phase).",
   "main": "src/core.js",
   "scripts": {

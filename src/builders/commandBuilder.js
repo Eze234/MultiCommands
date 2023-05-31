@@ -52,11 +52,10 @@ class builder {
         return {
             name: data.name,
             description: data.description,
+            aliases: data.aliases,
             slash: {
                 name: data.name,
-                description: data.description,
-                type: data.type ? data.type : null,
-                options: data.options
+                description: data.description
             }
         }
     }
