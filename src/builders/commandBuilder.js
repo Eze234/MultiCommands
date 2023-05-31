@@ -1,4 +1,5 @@
 const { slashType } = require("../core");
+const { SlashCommandBuilder } = require("discord.js")
 
 class builder {
     constructor() {
@@ -45,19 +46,9 @@ class builder {
         return this
     }
 
-    async start() {
+     start() {
         let data = this.data
-        if (!data.name) throw new Error(`[MultiCommands => hybridBuilder] Command name not provided.`)
-        if (!data.description) throw new Error(`[MultiCommands => hybridBuilder] Command description not provided.`)
-        return {
-            name: data.name,
-            description: data.description,
-            aliases: data.aliases,
-            slash: {
-                name: data.name,
-                description: data.description
-            }
-        }
+        return new SlashCommandBuilder().setName(data.name).setDescription(data.description)
     }
 }
 
