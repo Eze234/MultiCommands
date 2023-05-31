@@ -9,6 +9,3 @@ module.exports.context = require("./builders/contextBuilder")
 
 // Utils
 module.exports.slashType = require("./utils/slashTypes")
-
-//Builders(Test)
-module.exports.hybridBuilder = require("./builders/commandBuilder")

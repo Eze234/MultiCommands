@@ -4,6 +4,7 @@ node_modules
 # Test
 structure.txt
 types/index.d.ts
+src/builders/commandBuilder.js
 
 # Deprecated
 deprecated
