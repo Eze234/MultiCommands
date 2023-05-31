@@ -1,3 +1,4 @@
+
 class contextBuilder {
     constructor (data, args, ...params) {
         this.data = data;
@@ -48,6 +49,13 @@ class contextBuilder {
                 })
             }
         }
+    }
+
+    async getValue({name: nam, type: t}) {
+        if (this.type === "prefix") return;
+        if (typeof nam !== "string") throw new Error(`[MultiCommands => StringError] The name must be a string`)
+        if (t === "user") this.interaction.options.getUser(nam);
+        if (t === "string") this.interaction.options.getString(nam);
     }
 }
 
