@@ -5,12 +5,16 @@ class contextBuilder {
         this.args = args;
         this.client = data.client
         this.type;
+        this.interaction; // temp
+        this.message; // temp
         if (!data.content) {
             this.type = "slash";
             this.author = data.user
+            this.interaction = data
         } else {
             this.type = "prefix"
             this.author = data.author
+            this.message = data
         }
     }
 
